@@ -1,10 +1,11 @@
 terraform {
   backend "remote" {
-    hostname     = "hesher.fatcat.testenv.scalr.dev"
-    organization = "acc-v0oja3orpvs7nb2n8"
+    hostname     = "chester.fatcat.testenv.scalr.dev"
+    organization = "env-v0oja4nugufnv5jpe"
+    token = "{add your token here}"
 
     workspaces {
-      name = "CredHelper"
+      name = "CredHelper2"
     }
   }
 }
