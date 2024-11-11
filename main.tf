@@ -1,7 +1,7 @@
 terraform {
   backend "remote" {
-    hostname     = "scalr-demo.scalr.io"
-    organization = "org-ssccu6d5ch61234"
+    hostname     = "hesher.fatcat.testenv.scalr.dev"
+    organization = "acc-v0oja3orpvs7nb2n8"
 
     workspaces {
       name = "CredHelper"
@@ -9,8 +9,7 @@ terraform {
   }
 }
 
-module "module-ec2" {
-  source        = "docs.scalr.io/env-t568vsij9i12345/module-ec2/aws"
-  version       = "0.0.4"
-  instance_type = "t2.nano"  # Required variable for the module
+module "electro_flute" {
+  source  = "hesher.fatcat.testenv.scalr.dev/acc-v0oja3orpvs7nb2n8/electro_flute/module"
+  version = "0.1.4"
 }
